@@ -22,6 +22,13 @@
 </head>
 
 <body>
+    <!-- Redirect User to HTTPS site -->
+    
+     if (location.protocol !== "https:"){
+      //redirect to https traffic when loaded with http
+     location.replace(window.location.href.replace("http:", "https:"));
+    }
+    
     <!--To prevent user from using Ctrl shortcuts-->
 <!--<body oncontextmenu="return false" onkeydown="return false;" onmousedown="return false;" >
     <?php
